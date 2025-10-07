@@ -1,4 +1,4 @@
-<!--Cute si Andrei Gyles Lim-->
+
 
 <?php
 require __DIR__.'/db.php';
