@@ -2,22 +2,17 @@
 // menu.php
 require __DIR__.'/db.php';
 
-// Quick stats
-$totalRow    = $sql->query("SELECT COUNT(*) AS c FROM employeedetails");
-$total       = $totalRow ? (int)$totalRow->fetch_assoc()['c'] : 0;
 
-$ondutyRow   = $sql->query("SELECT COUNT(*) AS c FROM employeedetails WHERE DutyType='OnDuty'");
-$onduty      = $ondutyRow ? (int)$ondutyRow->fetch_assoc()['c'] : 0;
 
-$lateRow     = $sql->query("SELECT COUNT(*) AS c FROM employeedetails WHERE DutyType='Late'");
-$late        = $lateRow ? (int)$lateRow->fetch_assoc()['c'] : 0;
 
-$overtimeRow = $sql->query("SELECT COUNT(*) AS c FROM employeedetails WHERE DutyType='Overtime'");
-$overtime    = $overtimeRow ? (int)$overtimeRow->fetch_assoc()['c'] : 0;
+// Get current date and time
+date_default_timezone_set('Asia/Manila');  
+$currentDateTime = date('F j, Y - g:i A');
 
 include __DIR__.'/partials/header.php';
 include __DIR__.'/partials/sidebar.php';
 include __DIR__.'/partials/topbar.php';
+
 ?>
 <div class="app-content container-fluid">
 
@@ -27,8 +22,9 @@ include __DIR__.'/partials/topbar.php';
       <div class="card shadow-soft" style="border-left:6px solid var(--sneat-primary, var(--bs-primary));">
         <div class="card-body d-flex justify-content-between align-items-center" style="padding:16px 18px;">
           <div>
-            <div style="font-weight:800; font-size:1.05rem; color:var(--sneat-primary, var(--bs-primary))">Welcome, Admin!</div>
-            <div class="text-muted-2">Use this dashboard to browse, add, and manage employee duty records.</div>
+            <div style="font-weight:600; font-size:0.95rem; color:var(--sneat-primary, var(--bs-primary))">Welcome, Bianca!</div>
+            <div style="font-size:1.35rem; color:var(--sneat-text); margin-top:6px; font-weight:700;">Today is <?= $currentDateTime ?></div>
+            <div class="text-muted-2" style="margin-top:8px;">Use this dashboard to browse, add, and manage employee duty records.</div>
           </div>
         </div>
       </div>

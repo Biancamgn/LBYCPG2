@@ -3,7 +3,7 @@
 $host = '127.0.0.1';
 $user = 'root';
 $pass = '';
-$db   = 'activity1';
+$db   = 'payroll';  
 $port = 3306;
 
 $sql = @new mysqli($host, $user, $pass, $db, $port);

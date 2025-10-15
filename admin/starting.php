@@ -186,8 +186,8 @@
       <p class="description">
         LBYCPG2 | EQ3  <br/> Lascano, Quiazon, Manganaan</p>
         
-      <a href="menu.php" class="btn-enter" role="button">
-        <span>Enter Dashboard</span>
+      <a href="login.php" class="btn-enter" role="button">
+        <span>Admin Login</span>
         <span class="arrow">→</span>
       </a>
 
